@@ -1,0 +1,125 @@
+{% extends '::base.html.twig' %}
+
+{#% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('assets/css/pages/page_search.css') }}">
+{% endblock %#}
+
+
+
+{% block body %}
+<!--=== Content Part ===-->
+<div class="container">
+	<div class="margin-bottom-20"></div>
+    <!-- Service Blcoks -->
+    <div class="row service-v1 margin-bottom-40">
+        <div class="col-md-3 md-margin-bottom-40">
+            <div class="carousel slide carousel-v1" id="myCarousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <a href="{{path('place_space1')}}"><img alt="" src="http://dummyimage.com/800x600/aaaaaa/000&text=1A"></a>
+                        <div class="carousel-caption">
+                            <p>Facilisis odio, dapibus ac justo acilisis gestinas.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="" src="http://dummyimage.com/800x600/aaaaaa/000&text=1B">
+                        <div class="carousel-caption">
+                            <p>Cras justo odio, dapibus ac facilisis into egestas.</p>
+                        </div>
+                        </div>
+                    <div class="item">
+                        <img alt="" src="http://dummyimage.com/800x600/aaaaaa/000&text=1C">
+                        <div class="carousel-caption">
+                            <p>Justo cras odio apibus ac afilisis lingestas de.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-arrow">
+                    <a data-slide="prev" href="#myCarousel" class="left carousel-control">
+                        <i class="icon-angle-left"></i>
+                    </a>
+                    <a data-slide="next" href="#myCarousel" class="right carousel-control">
+                        <i class="icon-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+            <h2>Le sous marin</h2>
+            <p>L'open space de type Loft pour travailler de façon studieuse.</p>
+        </div>
+        <div class="col-md-3">
+            <img class="img-responsive" src="http://dummyimage.com/800x600/aaaaaa/000&text=2" alt="">
+            <h2>Le port</h2>
+            <p>Où l'on échange librement sur ces aventures en mer </p>
+        </div>
+       <div class="col-md-3">
+            <img class="img-responsive" src="http://dummyimage.com/800x600/aaaaaa/000&text=3" alt="">
+            <h2>La salle de réunion</h2>
+            <p>Pour recevoir des clients, faire un point en équipe au calme ou faire une présentation</p>
+        </div>
+       <div class="col-md-3">
+            <img class="img-responsive" src="http://dummyimage.com/800x600/aaaaaa/000&text=4" alt="">
+            <h2>Le bar</h2>
+            <p>Pour recharger les batteries et échanger autour d'un café</p>
+        </div>
+    </div>
+    <!-- End Service Blcoks -->
+
+    <hr class="margin-bottom-40">
+
+    <!-- Info Blcoks -->
+    <div class="row">
+        <div class="col-sm-4 info-blocks">
+            <i class="icon-bell icon-info-blocks"></i>
+            <div class="info-blocks-in">
+                <h3>Here will be some title</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum animi..</p>
+            </div>
+        </div>
+        <div class="col-sm-4 info-blocks">
+            <i class="icon-hdd icon-info-blocks"></i>
+            <div class="info-blocks-in">
+                <h3>Here will be some title</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum animi..</p>
+            </div>
+        </div>
+        <div class="col-sm-4 info-blocks">
+            <i class="icon-lightbulb icon-info-blocks"></i>
+            <div class="info-blocks-in">
+                <h3>Here will be some title</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum animi..</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 info-blocks">
+            <i class="icon-heart-empty icon-info-blocks"></i>
+            <div class="info-blocks-in">
+                <h3>Here will be some title</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum animi..</p>
+            </div>
+        </div>
+        <div class="col-sm-4 info-blocks">
+            <i class="icon-thumbs-up-alt icon-info-blocks"></i>
+            <div class="info-blocks-in">
+                <h3>Here will be some title</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum animi..</p>
+            </div>
+        </div>
+        <div class="col-sm-4 info-blocks">
+            <i class="icon-laptop icon-info-blocks"></i>
+            <div class="info-blocks-in">
+                <h3>Here will be some title</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum animi..</p>
+            </div>
+        </div>
+    </div>
+    <!--End Info Blcoks -->
+
+
+
+</div><!--/container-->
+<!--=== End Content Part ===-->
+
+{% endblock %}

@@ -1,0 +1,53 @@
+<div class="col-md-3 col-sm-6">
+    <div class="pricing hover-effect">
+        <div class="pricing-head">
+            <h3>{{title}} <span>{{subtitle}}</span></h3>
+            <h4>{{price}}<i>€ HT</i> <span>{{price_details|raw}}</span></h4>
+        </div>
+        <ul class="pricing-content list-unstyled">
+        	{% if options.full_access is defined and options.full_access %}
+            <li><i class="glyphicon glyphicon-time"></i> 7j/7 24h/24</li>
+            {% else %}
+            <li><i class="glyphicon glyphicon-time"></i> Du lundi au vendredi de 9h30 à 18h00</li>
+         	{% endif %}
+
+         	{% if options.lock is defined and options.lock %}
+            <li><i class="icon-lock"></i> Préavis 1 mois</li>
+            {% else %}
+            <li><i class="icon-unlock"></i> Sans engagement</li>
+         	{% endif %}
+
+
+        	{% if options.listed_on_website is defined and options.listed_on_website %}
+            <li><i class="icon-check"></i> Fiche de présentation sur le site</li>
+            {% else %}
+            <li><i class="icon-check-empty"></i> Fiche de présentation sur le site</li>
+         	{% endif %}
+
+        	{% if options.private_box is defined and options.private_box %}
+            <li><i class="icon-check"></i> Casier / Rangement</li>
+            {% else %}
+            <li><i class="icon-check-empty"></i> Casier / Rangement</li>
+         	{% endif %}
+
+        	{% if options.mail is defined and options.mail %}
+            <li><i class="icon-check"></i> Service courrier</li>
+            {% else %}
+            <li><i class="icon-check-empty"></i> Service courrier</li>
+         	{% endif %}
+
+        	{% if options.own_desk is defined and options.own_desk %}
+            <li><i class="icon-check-sign"></i> Espace de travail attitré</li>
+            {% else %}
+            <li><i class="icon-check-empty"></i> Espace de travail attitré</li>
+         	{% endif %}
+
+        </ul>
+        <div class="pricing-footer">
+        	{% if description is defined and description %}
+            <p>{{description}}</p>
+         	{% endif %}
+            <button type="submit">Commander</button>
+        </div>
+    </div>
+</div>

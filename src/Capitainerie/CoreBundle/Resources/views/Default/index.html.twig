@@ -1,0 +1,186 @@
+{% extends '::base.html.twig' %}
+
+
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{asset('assets/plugins/flexslider/flexslider.css') }}">
+    <link rel="stylesheet" href="{{asset('assets/plugins/bxslider/jquery.bxslider.css') }}">
+    <link rel="stylesheet" href="{{asset('assets/plugins/revolution_slider/rs-plugin/css/settings.css') }}" type="text/css" media="screen">
+
+{% endblock %}
+
+
+{% block javascripts %}
+	{{ parent() }}
+	<script type="text/javascript" src="{{asset('assets/plugins/flexslider/jquery.flexslider-min.js') }}"></script>
+	<script type="text/javascript" src="{{asset('assets/plugins/bxslider/jquery.bxslider.js') }}"></script>
+	<script type="text/javascript" src="{{asset('assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
+	<script type="text/javascript" src="{{asset('assets/js/pages/index.js') }}"></script>
+	<script type="text/javascript">
+    jQuery(document).ready(function() {
+        //App.initSliders();
+        App.initBxSlider();
+        Index.initRevolutionSlider();
+    });
+	</script>
+
+{% endblock %}
+
+
+{% block body %}
+<!--=== Slider ===-->
+<div class="fullwidthbanner-container">
+    <div class="fullwidthbanner">
+        <ul>
+            {% include "CapitainerieCoreBundle:Default:index_slide2.html.twig" %}
+            {% include "CapitainerieCoreBundle:Default:index_slide1.html.twig" %}
+            {% include "CapitainerieCoreBundle:Default:index_slide3.html.twig" %}
+            {% include "CapitainerieCoreBundle:Default:index_slide4.html.twig" %}
+            {#
+            #}
+
+        </ul>
+
+        <div class="tp-bannertimer tp-bottom"></div>
+    </div>
+</div>
+<!--=== End Slider ===-->
+
+<!--=== Content Part ===-->
+<div class="container">
+	<div class="margin-bottom-20"></div>
+	<!-- Service Blocks -->
+	<div class="row margin-bottom-10">
+    	<div class="col-md-4 service-alternative">
+    		<div class="service">
+                <i class="icon-resize-small service-icon"></i>
+    			<div class="desc">
+    				<h4>Fully Responsive</h4>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="col-md-4 service-alternative">
+    		<div class="service">
+                <i class="icon-cogs service-icon"></i>
+    			<div class="desc">
+    				<h4>HTML5 + CSS3</h4>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="col-md-4 service-alternative">
+    		<div class="service">
+                <i class="icon-plane service-icon"></i>
+    			<div class="desc">
+    				<h4>Launch Ready</h4>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
+    			</div>
+    		</div>
+    	</div>
+	</div><!--/row-->
+	<!-- End Service Blokcs -->
+
+	<!-- Recent Works -->
+    <div class="row margin-bottom-40">
+        <div class="col-lg-12">
+            <div class="headline"><h2>Découvez nos espaces</h2></div>
+            <ul class="bxslider recent-work">
+                <li>
+                    <a href="#">
+                        <em class="overflow-hidden"><img src="/assets/img/main/1.jpg" alt="" /></em>
+                        <span>
+                            <strong>Espace 1</strong>
+                            <i>Anim pariatur cliche reprehenderit</i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <em class="overflow-hidden"><img src="/assets/img/main/2.jpg" alt="" /></em>
+                        <span>
+                            <strong>Espace 2</strong>
+                            <i>Responsive Bootstrap Template</i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <em class="overflow-hidden"><img src="/assets/img/main/3.jpg" alt="" /></em>
+                        <span>
+                            <strong>Espace 3</strong>
+                            <i>Pariatur prehe cliche reprehrit</i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <em class="overflow-hidden"><img src="/assets/img/main/4.jpg" alt="" /></em>
+                        <span>
+                            <strong>Espace 4</strong>
+                            <i>Craft labore wes anderson cred</i>
+                        </span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div><!--/row-->
+	<!-- End Recent Works -->
+
+	<!-- Info Blokcs -->
+	<div class="row margin-bottom-10">
+    	<!-- Welcome Block -->
+		<div class="col-md-8">
+			<div class="headline"><h2>Welcome To Unify</h2></div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <img class="img-responsive margin-bottom-20" src="/assets/img/new/img15.jpg" alt="" />
+                </div>
+                <div class="col-sm-8">
+                    <p>Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals. It works on all major web browsers, tablets and phone.</p>
+                    <ul class="list-unstyled margin-bottom-20">
+                        <li><i class="icon-ok color-green"></i> Donec id elit non mi porta gravida</li>
+                        <li><i class="icon-ok color-green"></i> Corporate and Creative</li>
+                        <li><i class="icon-ok color-green"></i> Responsive Bootstrap Template</li>
+                        <li><i class="icon-ok color-green"></i> Corporate and Creative</li>
+                    </ul>
+                </div>
+            </div>
+
+            <blockquote class="hero-unify">
+                <p>Award winning digital agency. We bring a personal and effective approach to every project we work on, which is why. Unify is an incredibly beautiful responsive Bootstrap Template for corporate professionals.</p>
+                <small>CEO, Jack Bour</small>
+            </blockquote>
+        </div><!--/col-md-8-->
+
+        <!-- Posts -->
+        <div class="col-md-4 posts">
+            <div class="headline"><h3>Recent Entries</h3></div>
+            <dl class="dl-horizontal">
+                <dt><a href="#"><img alt="" src="/assets/img/sliders/elastislide/6.jpg"></a></dt>
+                <dd>
+                    <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p>
+                </dd>
+            </dl>
+            <dl class="dl-horizontal">
+                <dt><a href="#"><img alt="" src="/assets/img/sliders/elastislide/10.jpg"></a></dt>
+                <dd>
+                    <p><a href="#">Lorem sequat ipsum dolor lorem sit amet, consectetur adipiscing dolor elit.</a></p>
+                </dd>
+            </dl>
+            <dl class="dl-horizontal">
+                <dt><a href="#"><img alt="" src="/assets/img/sliders/elastislide/11.jpg"></a></dt>
+                <dd>
+                    <p><a href="#">It works on all major web browsers, tablets and lorem sequat ipsum dolor.</a></p>
+                </dd>
+            </dl>
+        </div>
+	</div><!--/row-->
+	<!-- End Info Blokcs -->
+
+
+</div><!--/container-->
+<!-- End Content Part -->
+{% endblock %}

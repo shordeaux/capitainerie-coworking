@@ -1,0 +1,85 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{asset('assets/css/pages/page_contact.css')}}">
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="{{asset('assets/plugins/gmap/gmap.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js/pages/contact.js')}}"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        Contact.initMap();
+    });
+</script>
+
+
+{% endblock %}
+
+
+{% block body %}
+<!-- Google Map -->
+<div id="map" class="map margin-bottom-40">
+</div><!---/map-->
+<!-- End Google Map -->
+
+<!--=== Content Part ===-->
+<div class="container">
+	<div class="row margin-bottom-30">
+		<div class="col-md-9 mb-margin-bottom-30">
+            <div class="headline"><h2>Contactez-nous</h2></div>
+			<form>
+                <label>Nom</label>
+                <div class="row margin-bottom-20">
+                    <div class="col-md-7 col-md-offset-0">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+
+                <label>Email <span class="color-red">*</span></label>
+                <div class="row margin-bottom-20">
+                    <div class="col-md-7 col-md-offset-0">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+
+                <label>Message</label>
+                <div class="row margin-bottom-20">
+                    <div class="col-md-11 col-md-offset-0">
+                        <textarea rows="8" class="form-control"></textarea>
+                    </div>
+                </div>
+
+                <p><button type="submit" class="btn-u">Envoyer</button></p>
+            </form>
+        </div><!--/col-md-9-->
+
+		<div class="col-md-3">
+        	<!-- Contacts -->
+            <div class="headline"><h2>Coordonnées</h2></div>
+            <ul class="list-unstyled who margin-bottom-30">
+                <li><i class="icon-home"></i>10, rue de la comédie<br /><span style="padding-left: 30px">82000 Montauban</span></li>
+                <li><a href="mailto:contact@capitainerie-coworking.com"><i class="icon-envelope-alt"></i>contact@capitainerie-coworking.com</a></li>
+                <li><i class="icon-phone-sign"></i>05 63 66 96 27</li>
+                <li><i class="icon-globe"></i><a href="http://www.capitainerie-coworking.com">www.capitainerie-coworking.com</a></li>
+            </ul>
+
+        	<!-- Business Hours -->
+            <div class="headline"><h2>Heures d'ouvertures</h2></div>
+            <ul class="list-unstyled margin-bottom-30">
+            	<li><strong>Lundi-Vendredi:</strong> 9h30 à 18h00</li>
+            	<li><strong>Samedi-Dimanche:</strong> fermé</li>
+            </ul>
+
+
+        </div><!--/col-md-3-->
+    </div><!--/row-->
+
+
+</div><!--/container-->
+<!--=== End Content Part ===-->
+{% endblock %}

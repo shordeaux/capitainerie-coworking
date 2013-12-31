@@ -1,0 +1,5 @@
+capitainerie_core:
+    resource: "@CapitainerieCoreBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

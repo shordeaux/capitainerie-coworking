@@ -1,0 +1,51 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+<!--=== Content Part ===-->
+<div class="container">
+    <div class="margin-bottom-20"></div>
+    <div class="tag-box tag-box-v2">
+        <p>Notre réseau est composé de nombreux talents que vous pouvez découvrir ci-dessous. N'hésitez pas à les contacter directement ou à venir les rencontrer lors d'un de nos événements.</p>
+    </div>
+
+    <div class="headline"><h2>Capitaines</h2></div>
+    <div class="row team margin-bottom-20">
+        {% include 'CapitainerieCoreBundle:Team:index_box.html.twig' with {
+        	details: 'team_shordeaux',
+        	picture: 'http://dummyimage.com/872x724/bbb/000&text=S%C3%A9bastien+Hordeaux',
+        	name: 'Sébastien Hordeaux',
+        	company: 'WaterProof',
+        	description: 'Création d\'applications web sur mesure',
+        	facebook: 'sebastien.hordeaux',
+        	twitter: 'shordeaux'
+
+		} %}
+        {% include 'CapitainerieCoreBundle:Team:index_box.html.twig' with {
+        	picture: 'http://dummyimage.com/872x724/bbb/000&text=Cyril+Barragan',
+        	name: 'Cyril Barragan',
+        	company: 'WaterProof',
+        	description: 'Création d\'applications web sur mesure',
+
+		} %}
+        {% include 'CapitainerieCoreBundle:Team:index_box.html.twig' with {
+        	picture: 'http://dummyimage.com/872x724/bbb/000&text=Jocelyn+Dubois',
+        	name: 'Jocelyn Dubois',
+        	company: 'WaterProof',
+        	description: 'Création d\'applications web sur mesure',
+
+		} %}
+        {% include 'CapitainerieCoreBundle:Team:index_box.html.twig' with {facebook: false, twitter: false, google_plus: false} %}
+    </div>
+    <div class="headline"><h2>Lieutenants</h2></div>
+    <div class="row team margin-bottom-20">
+        {% include 'CapitainerieCoreBundle:Team:index_box.html.twig' with {facebook: false, twitter: false, google_plus: false} %}
+    </div>
+
+    <div class="headline"><h2>Matelots</h2></div>
+    <div class="row team margin-bottom-20">
+        {% include 'CapitainerieCoreBundle:Team:index_box.html.twig' with {facebook: false, twitter: false, google_plus: false} %}
+    </div>
+
+    </div>
+</div><!--/container-->
+<!--=== End Content Part ===-->
+{% endblock %}

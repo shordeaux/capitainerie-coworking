@@ -1,0 +1,29 @@
+<li data-transition="3dcurtain-vertical" data-slotamount="10" data-masterspeed="300"
+	data-thumb="/assets/img/sliders/revolution/thumbs/thumb1.jpg">
+
+    <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
+    <img src="/assets/img/sliders/revolution/bg1.jpg">
+
+    <div class="caption large_text sfb bg-black-opacity"
+         data-x="176"
+         data-y="12"
+         data-speed="300"
+         data-start="800"
+         data-easing="easeOutExpo">
+         UN LIEU D'
+         <span style="color: #ffcc00;">ECHANGES</span>
+    </div>
+
+    {% for i in 1..15 %}
+    <div class="caption randomrotate"
+         data-x="{{ random(960) }}"
+         data-y="{{ 55 + random(300) }}"
+         data-speed="600"
+         data-start="{{ 1100 + 100 * i }}"
+         data-easing="easeOutExpo">
+         <img class="img-border" src="http://dummyimage.com/140x140/aaaaaa/000&text=Co+Worker+{{ i }}" alt="Image {{ i }}">
+    </div>
+	{% endfor %}
+
+
+</li>

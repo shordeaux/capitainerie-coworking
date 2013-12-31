@@ -1,0 +1,116 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('assets/css/pages/page_pricing.css') }}">
+{% endblock %}
+
+{% block body %}
+{#
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs margin-bottom-40">
+    <div class="container">
+        <h1 class="pull-left">Tarifs</h1>
+        <ul class="pull-right breadcrumb">
+            <li><a href="index.html">Accueil</a></li>
+            <li class="active">Tarifs</li>
+        </ul>
+    </div>
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+#}
+
+<!--=== Content Part ===-->
+<div class="container">
+    <!-- Pricing -->
+    <div class="margin-bottom-20"></div>
+	<div class="tag-box tag-box-v2">
+		<h2>Toutes nos offres donnent accès au
+			<span class="label label-default">Wifi</span>, au
+			<span class="label label-default">Café et Thé</span>,
+			à l'<span class="label label-default">imprimante</span>,
+			au prêt d'<span class="label label-default">écran 22'</span>
+		</h2>
+    </div>
+    <div class="row margin-bottom-40">
+        {% include 'CapitainerieCoreBundle:Default:prices_box.html.twig' with {
+        	title: 'Mousaillon',
+        	subtitle: 'Pour les utilisations ponctuelles',
+        	price: '10',
+        	price_details: 'Par &frac12; journée',
+        	options: {
+        	},
+        	description: ""
+        	} %}
+        {% include 'CapitainerieCoreBundle:Default:prices_box.html.twig' with {
+        	title: 'Matelot',
+        	subtitle: 'Pour les utilisations occasionnelles',
+        	price: '150',
+        	price_details: 'Pour 20 &frac12; journées (valables 1 an)',
+        	options: {
+        		listed_on_website: true
+        	},
+        	description: ""
+        	} %}
+        {% include 'CapitainerieCoreBundle:Default:prices_box.html.twig' with {
+        	title: 'Lieutenant',
+        	subtitle: 'Mi-temps',
+        	price: '125',
+        	price_details: 'Par mois',
+        	options: {
+        		full_access: true,
+        		own_desk: false,
+        		listed_on_website: true,
+        		private_box: true,
+        		lock: true,
+        		mail: true
+        	},
+        	description: ""
+        	} %}
+        {% include 'CapitainerieCoreBundle:Default:prices_box.html.twig' with {
+        	title: 'Capitaine',
+        	subtitle: 'Temps plein',
+        	price: '200',
+        	price_details: 'Par mois',
+        	options: {
+        		full_access: true,
+        		own_desk: true,
+        		listed_on_website: true,
+        		private_box: true,
+        		lock: true,
+        		mail: true
+        	}
+        	} %}
+
+
+    </div><!--/row-->
+    <!--//End Pricing -->
+
+    <div class="tag-box tag-box-v3">
+        <h2><i class="glyphicon glyphicon-time"></i> Horaires d'ouverture</h2>
+        <p>L'espace est ouvert tous les jours ouvrés entre 9h30 et 18h00.</p>
+        <p>Chaque lieutenant et capitaine a sa propre clef et peut accéder à l'espace en dehors de ces horaires. Le dernier qui part se charge de fermer l'espace.</p>
+    </div>
+
+    <div class="tag-box tag-box-v6">
+        <h2><i class="icon-unlock"></i> Rester libre ou s'engager dans la durée?</h2>
+        <p>Parce que chacun d'entre nous a des besoins différents et que ces besoins évoluent dans le temps, nous proposons un panel de formules large.</p>
+        <p>Même dans le cas des formules les plus complètes, la durée de préavis n'est que d'un mois pour que vous puissiez faire évoluer l'offre le plus souplement possible. </p>
+    </div>
+
+    <div class="tag-box tag-box-v3">
+        <h2><i class="icon-briefcase"></i> Laissez votre travail au bureau</h2>
+        <p>Pour vous éviter de transporter vos affaires d'un jour à l'autre, nous proposons des espaces de rangement privatifs vous permettant de laisser certaines de vos affaires dans l'espace.</p>
+    </div>
+
+    <div class="tag-box tag-box-v6">
+        <h2><i class="icon-desktop"></i> Un bureau comme à la maison</h2>
+        <p>Pour ceux qui souhaitent avoir leurs habitudes en ayant toujours un bureau à la même place, nous proposons aux capitaines qui le souhaitent cette possibilité. Toutefois, nous vous encourageons à la mobilité pour renforcer le processus d'émergence et les opportunités de rencontres avec les autres personnes présentes.</p>
+    </div>
+
+
+
+</div><!--/container-->
+<!--=== End Content Part ===-->
+
+{% endblock %}
