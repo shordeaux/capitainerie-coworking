@@ -3,3 +3,6 @@ capitainerie_core:
     type:     annotation
     prefix:   /
 
+_imagine:
+    resource: .
+    type:     imagine

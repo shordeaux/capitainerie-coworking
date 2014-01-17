@@ -67,3 +67,19 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+avalanche_imagine:
+    source_root:  %kernel.root_dir%/../web
+    web_root:     %kernel.root_dir%/../web
+    cache_prefix: media/cache
+    driver:       gd
+    filters:
+        small:
+            type:    thumbnail
+            options: { size: [872, 724], mode: outbound }
+        presentation:
+            type:    thumbnail
+            options: { size: [872, 724], mode: outbound }
+        mini:
+            type:    thumbnail
+            options: { size: [100, 100], mode: outbound }
