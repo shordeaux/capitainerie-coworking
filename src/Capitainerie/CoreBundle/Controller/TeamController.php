@@ -27,5 +27,23 @@ class TeamController extends Controller
 		return array();
 	}
 
+	/**
+	 * @Route("/montauban/membres/cbarragan", name="team_cbarragan")
+	 * @Template()
+	 */
+	public function cbarraganAction()
+	{
+		return array();
+	}
+
+	/**
+	 * @Route("/montauban/membres/jdubois", name="team_jdubois")
+	 * @Template()
+	 */
+	public function jduboisAction()
+	{
+		return array();
+	}
+
 
 }

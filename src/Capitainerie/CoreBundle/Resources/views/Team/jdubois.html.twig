@@ -1,0 +1,80 @@
+{% extends '::base.html.twig' %}
+
+
+{% block body %}
+
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs margin-bottom-40">
+	<div class="container">
+        <h1 class="pull-left">Jocelyn Dubois <small>WaterProof</small></h1>
+        <ul class="pull-right breadcrumb">
+            <li><a href="{{ path('homepage') }}">Accueil</a></li>
+            <li><a href="{{ path('team') }}">Co-workers</a></li>
+            <li class="active">Jocelyn Dubois</li>
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+
+<!--=== Content Part ===-->
+<div class="container">
+    <div class="row team ">
+        <div class="col-md-5">
+            <div class="thumbnail-style">
+                <img alt="" src="{{( '/bundles/capitaineriecore/images/jdubois.png'| apply_filter('presentation')) }}" class="img-responsive">
+                <h3><a>Jocelyn Dubois</a> <small>Développeur web - WaterProof</small></h3>
+                <p>Travaille pour la société WaterProof depuis Novembre 2012.</p>
+                <ul class="list-unstyled list-inline team-socail">
+                    <li><a href="#"><i class="icon-twitter"></i></a></li>
+                    <li><a href="https://plus.google.com/u/0/+JocelynDUBOIS"><i class="icon-google-plus"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="margin-bottom-10"></div>
+            <p>D'abord autodidacte, j'ai intégrer un DUT informatique une fois mon BAC en poche. Je me suis rapidement spécialisé dans le web en choississant cette option en deuxième année. Suite à ça, j'ai intégrer un bachelor de "computing for internet and multimedia" en Ecosse dans la ville d'aberdeen. J'ai ensuite intégrer WaterProof dans laquelle j'évolue désormais.</p><br>
+            <div class="tag-box tag-box-v1">
+            	<h2>Pourquoi Coworker?</h2>
+                <p>C'est un moyen pratique pour les personnes logant loin de leur lieu de travaille. Cela peut permettre de faire moins de trajet tout en ayant un environement de travail plus sérieux que son canapé. Et c'est avant tout un bon moyen de se faire des contact dans son milieu et de rencontrer des gens avec qui on peux partager des discutions animées et passionées !</p>
+            </div>
+            <div class="carousel slide testimonials testimonials-v1" id="testimonials-3">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <p>Blablalba</p>
+                        <div class="testimonial-info">
+                            <img alt="" src="{{( '/bundles/capitaineriecore/images/shordeaux.png'| apply_filter('mini')) }}">
+                            <span class="testimonial-author">
+                                Sébastien Hordeaux
+                                <em>CEO - WaterProof</em>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <p>Blablabla</p>
+                        <div class="testimonial-info">
+                            <img alt="" src="{{( '/bundles/capitaineriecore/images/cbarragan.png'| apply_filter('mini')) }}">
+                            <span class="testimonial-author">
+                                Cyril Barragan
+                                <em>Développeur web - WaterProof</em>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-arrow">
+                    <a data-slide="prev" href="#testimonials-3" class="left carousel-control">
+                        <i class="icon-angle-left"></i>
+                    </a>
+                    <a data-slide="next" href="#testimonials-3" class="right carousel-control">
+                        <i class="icon-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div><!--/container-->
+<!--=== End Content Part ===-->
+
+{% endblock %}

@@ -13,3 +13,7 @@ _configurator:
 _main:
     resource: routing.yml
 
+_imagine:
+    resource: .
+    type:     imagine
+

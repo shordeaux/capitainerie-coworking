@@ -1,7 +1,7 @@
 <div class="col-sm-3">
     <div class="thumbnail-style">
         {% if details is defined %}<a href="{{ path(details) }}">{% endif %}<img alt="" src="{{picture|default("http://dummyimage.com/872x724/bbb/000&text=Rejoignez-nous")}}" class="img-responsive">{% if details is defined %}</a>{% endif %}
-        <h3>{% if details is defined %}<a href="{{ path(details) }}">{% endif %}{{name|default("Votre nom")}}{% if details is defined %}</a>{% endif %} <small>{{company|default("Votre société")}}</small></h3>
+		<h3>{% if details is defined %}<a href="{{ path(details) }}">{% endif %}{{name|default("Votre nom")}}{% if details is defined %}</a>{% endif %} <small>{{company|default("Votre société")}}</small></h3>
         <p>{{description|default("Présentation de votre activité")}}</p>
         <ul class="list-unstyled list-inline team-socail">
         	{% if facebook is defined %}
@@ -11,7 +11,7 @@
             <li><a href="{% if twitter %}https://twitter.com/{{twitter}}{% else %}#{% endif %}"><i class="icon-twitter"></i></a></li>
             {% endif %}
         	{% if google_plus is defined %}
-            <li><a href="#"><i class="icon-google-plus"></i></a></li>
+            <li><a href="https://plus.google.com/u/0/+{{google_plus}}"><i class="icon-google-plus"></i></a></li>
             {% endif %}
         </ul>
     </div>

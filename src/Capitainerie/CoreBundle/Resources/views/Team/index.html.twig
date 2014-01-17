@@ -11,7 +11,7 @@
     <div class="row team margin-bottom-20">
         {% include 'CapitainerieCoreBundle:Team:index_box.html.twig' with {
         	details: 'team_shordeaux',
-        	picture: 'http://dummyimage.com/872x724/bbb/000&text=S%C3%A9bastien+Hordeaux',
+        	picture: ('/bundles/capitaineriecore/images/shordeaux.png'| apply_filter('small')),
         	name: 'Sébastien Hordeaux',
         	company: 'WaterProof',
         	description: 'Création d\'applications web sur mesure',
@@ -20,17 +20,21 @@
 
 		} %}
         {% include 'CapitainerieCoreBundle:Team:index_box.html.twig' with {
-        	picture: 'http://dummyimage.com/872x724/bbb/000&text=Cyril+Barragan',
-        	name: 'Cyril Barragan',
+        	details: 'team_cbarragan',
+			picture: ('/bundles/capitaineriecore/images/cbarragan.png'| apply_filter('small')),
+			name: 'Cyril Barragan',
         	company: 'WaterProof',
         	description: 'Création d\'applications web sur mesure',
 
 		} %}
         {% include 'CapitainerieCoreBundle:Team:index_box.html.twig' with {
-        	picture: 'http://dummyimage.com/872x724/bbb/000&text=Jocelyn+Dubois',
+        	details: 'team_jdubois',
+			picture: ('/bundles/capitaineriecore/images/jdubois.png'| apply_filter('small')),
         	name: 'Jocelyn Dubois',
         	company: 'WaterProof',
         	description: 'Création d\'applications web sur mesure',
+        	twitter: 'DjodjinoOurs',
+        	google_plus: 'JocelynDUBOIS'
 
 		} %}
         {% include 'CapitainerieCoreBundle:Team:index_box.html.twig' with {facebook: false, twitter: false, google_plus: false} %}
