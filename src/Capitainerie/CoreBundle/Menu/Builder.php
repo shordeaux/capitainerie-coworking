@@ -15,10 +15,10 @@ class Builder extends ContainerAware {
     	$homeMenu->addChild('Qu\'est ce que le coworking?', array('route' => 'homepage'));
     	$placeMenu = $menu->addChild('Le lieu', array('route' => 'place'));
         $placeMenu->addChild('Découvez le lieu', array('route' => 'place'));
-        $placeMenu->addChild('Espace 1', array('route' => 'homepage'));
-        $placeMenu->addChild('Espace 2', array('route' => 'homepage'));
-        $placeMenu->addChild('Espace 3', array('route' => 'homepage'));
-        $placeMenu->addChild('Espace 4', array('route' => 'homepage'));
+        $placeMenu->addChild('Le sous marin', array('route' => 'sous-marin'));
+        $placeMenu->addChild('Le port', array('route' => 'port'));
+        $placeMenu->addChild('La salle de réunion', array('route' => 'salle-reunion'));
+        $placeMenu->addChild('Le bar', array('route' => 'bar'));
         $placeMenu->addChild('Accès', array('route' => 'homepage'));
 
         $menu->addChild('Tarifs', array('route' => 'prices'));

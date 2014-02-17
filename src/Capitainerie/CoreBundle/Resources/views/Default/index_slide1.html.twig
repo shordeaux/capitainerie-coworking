@@ -14,16 +14,41 @@
          <span style="color: #ffcc00;">ECHANGES</span>
     </div>
 
-    {% for i in 1..15 %}
     <div class="caption randomrotate"
          data-x="{{ random(960) }}"
          data-y="{{ 55 + random(300) }}"
          data-speed="600"
-         data-start="{{ 1100 + 100 * i }}"
+         data-start="{{ 1100 + 100 * 1 }}"
          data-easing="easeOutExpo">
-         <img class="img-border" src="http://dummyimage.com/140x140/aaaaaa/000&text=Co+Worker+{{ i }}" alt="Image {{ i }}">
+         <img class="img-border" width="150px"  src="{{( '/bundles/capitaineriecore/images/jdubois.png'| apply_filter('small')) }}" alt="jdubois">
     </div>
-	{% endfor %}
+
+    <div class="caption randomrotate"
+         data-x="{{ random(960) }}"
+         data-y="{{ 55 + random(300) }}"
+         data-speed="600"
+         data-start="{{ 1100 + 100 * 2 }}"
+         data-easing="easeOutExpo">
+        <img class="img-border" width="150px" src="{{( '/bundles/capitaineriecore/images/cbarragan.png'| apply_filter('small')) }}" alt="cbarragan">
+    </div>
+
+    <div class="caption randomrotate"
+         data-x="{{ random(960) }}"
+         data-y="{{ 55 + random(300) }}"
+         data-speed="600"
+         data-start="{{ 1100 + 100 * 3 }}"
+         data-easing="easeOutExpo">
+        <img class="img-border" width="150px"  src="{{( '/bundles/capitaineriecore/images/shordeaux.png'| apply_filter('small')) }}" alt="shordeaux">
+    </div>
+
+    <div class="caption randomrotate"
+         data-x="{{ random(960) }}"
+         data-y="{{ 55 + random(300) }}"
+         data-speed="600"
+         data-start="{{ 1100 + 100 * 4 }}"
+         data-easing="easeOutExpo">
+        <img class="img-border" width="150px" src="{{picture|default("http://dummyimage.com/872x724/bbb/000&text=Rejoignez-nous")}}" alt="you">
+    </div>
 
 
 </li>
