@@ -20,7 +20,10 @@
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
         "knplabs/knp-menu-bundle": "2.0.*@alpha",
-		"knplabs/knp-menu": "2.0.*@alpha"
+		"knplabs/knp-menu": "2.0.*@alpha",
+		"imagine/Imagine": "*@dev",
+		"liip/imagine-bundle": "*@dev",
+		"avalanche123/imagine-bundle": "*@dev",
     },
     "scripts": {
         "post-install-cmd": [

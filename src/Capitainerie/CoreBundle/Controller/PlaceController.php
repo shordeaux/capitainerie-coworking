@@ -18,14 +18,42 @@ class PlaceController extends Controller
 	{
 		return array();
 	}
-	/**
-	 * @Route("/montauban/le-lieu/espace1", name="place_space1")
-	 * @Template()
-	 */
-	public function space1Action()
-	{
-		return array();
-	}
+
+    /**
+     * @Route("/montauban/le-lieu/le-sous-marin", name="sous-marin")
+     * @Template()
+     */
+    public function sousMarinAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/montauban/le-lieu/le-port", name="port")
+     * @Template()
+     */
+    public function portAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/montauban/le-lieu/la-salle-de-reunion", name="salle-reunion")
+     * @Template()
+     */
+    public function salleReunionAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/montauban/le-lieu/le-bar", name="bar")
+     * @Template()
+     */
+    public function barAction()
+    {
+        return array();
+    }
 
 
 }
