@@ -46,7 +46,19 @@ class DefaultController extends Controller
 	 */
 	public function contactAction()
 	{
-		return array();
+        if($this->getRequest()->getMethod('POST')){
+            $nom = $this->getRequest()->get('nom');
+            $email = $this->getRequest()->get('email');
+            $text = $this->getRequest()->get('text');
+            if($nom != "" && $email != "" && $text != ""){
+                //TODO: send mail.
+                return array('invalid' => false, 'sent' => true);
+            }else{
+                return array('invalid' => true, 'sent' => false);
+            }
+        }
+
+		return array('invalid' => false, 'sent' => false);
 	}
 	/**
 	 * @Route("/faq", name="faq")
