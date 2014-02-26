@@ -23,7 +23,7 @@
 
 {% block body %}
 
-    {#TODO: Ajouter le style pour les flash messages.#}
+    {#TODO: Ajouter le style pour les flash messages.
     {% if invalid %}
         <div class="alert">
             Vous devez remplir tout les champs.
@@ -34,7 +34,7 @@
         <div class="alert">
         Le mail a été envoyé !
     </div>
-    {% endif %}
+    {% endif %}#}
 
 
 <!-- Google Map -->
@@ -47,30 +47,40 @@
 	<div class="row margin-bottom-30">
 		<div class="col-md-9 mb-margin-bottom-30">
             <div class="headline"><h2>Contactez-nous</h2></div>
-			<form name="contact" action="{{ path('contact') }}" method="post">
+            {{ form_start(form, {'action': path('contact'), 'method': 'POST'}) }}
                 <label>Nom</label>
                 <div class="row margin-bottom-20">
                     <div class="col-md-7 col-md-offset-0">
-                        <input type="text" name="nom" class="form-control">
+                        {{ form_widget(form.name) }}
+                        {{ form_errors(form.name) }}
                     </div>
                 </div>
 
                 <label>Email <span class="color-red">*</span></label>
                 <div class="row margin-bottom-20">
                     <div class="col-md-7 col-md-offset-0">
-                        <input type="text" name="email" class="form-control">
+                        {{ form_widget(form.email) }}
+                        {{ form_errors(form.email) }}
                     </div>
                 </div>
 
                 <label>Message</label>
                 <div class="row margin-bottom-20">
                     <div class="col-md-11 col-md-offset-0">
-                        <textarea rows="8" name="text" class="form-control"></textarea>
+                        {{ form_widget(form.message) }}
+                        {{ form_errors(form.message) }}
+                    </div>
+                </div>
+
+                <div class="row margin-bottom-20">
+                    <div class="col-md-11 col-md-offset-0">
+                        {{ form_widget(form.captcha) }}
+                        {{ form_errors(form.captcha) }}
                     </div>
                 </div>
 
                 <p><button type="submit" class="btn-u">Envoyer</button></p>
-            </form>
+            {{ form_end(form) }}
         </div><!--/col-md-9-->
 
 		<div class="col-md-3">

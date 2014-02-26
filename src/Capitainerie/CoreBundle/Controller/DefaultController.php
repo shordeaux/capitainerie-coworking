@@ -46,19 +46,22 @@ class DefaultController extends Controller
 	 */
 	public function contactAction()
 	{
-        if($this->getRequest()->getMethod('POST')){
-            $nom = $this->getRequest()->get('nom');
-            $email = $this->getRequest()->get('email');
-            $text = $this->getRequest()->get('text');
-            if($nom != "" && $email != "" && $text != ""){
-                //TODO: send mail.
-                return array('invalid' => false, 'sent' => true);
-            }else{
-                return array('invalid' => true, 'sent' => false);
-            }
-        }
+		$form = $this->createForm(new \Capitainerie\CoreBundle\Form\ContactType());
+		$form->handleRequest($this->getRequest());
 
-		return array('invalid' => false, 'sent' => false);
+		if ($form->isValid()) {
+			$message = \Swift_Message::newInstance()
+			->setSubject(sprintf('Contact Capitainerie de %s', $form->get('name')->getData()))
+			->setFrom($form->get('email')->getData())
+			->setTo('contact@capitainerie-coworking.com')
+			->setBody($form->get('message')->getData())
+			;
+
+			$this->get('mailer')->send($message);
+			$this->get('session')->getFlashBag()->add('notice', "Votre message vient d'être envoyé. Nous vous répondrons dans les meilleurs délais.");
+		}
+
+		return array('form' => $form->createView());
 	}
 	/**
 	 * @Route("/faq", name="faq")
