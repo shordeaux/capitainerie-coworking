@@ -22,7 +22,7 @@ class Builder extends ContainerAware {
         //$placeMenu->addChild('Accès', array('route' => 'homepage'));
 
         $menu->addChild('Tarifs', array('route' => 'prices'));
-        $menu->addChild('Co-workers', array('route' => 'team'));
+        $menu->addChild('Coworkers', array('route' => 'team'));
         $menu->addChild('FAQ', array('route' => 'faq'));
         $menu->addChild('Contact', array('route' => 'contact'));
 
