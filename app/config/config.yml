@@ -83,3 +83,5 @@ avalanche_imagine:
         mini:
             type:    thumbnail
             options: { size: [100, 100], mode: outbound }
+
+gregwar_captcha: ~

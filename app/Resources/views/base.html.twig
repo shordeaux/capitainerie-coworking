@@ -72,6 +72,9 @@
     </div>
 </div><!--/header-->
 <!--=== End Header ===-->
+{% for flashMessage in app.session.flashbag.get('notice') %}
+<div class="alert alert-success">{{ flashMessage }}</div>    
+{% endfor %}
 
 		{% block body %}{% endblock %}
 
