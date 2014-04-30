@@ -2,6 +2,8 @@ imports:
     - { resource: config.yml }
 
 framework:
+    templating:
+        assets_base_urls: ~
     router:
         resource: "%kernel.root_dir%/config/routing_dev.yml"
         strict_requirements: true
