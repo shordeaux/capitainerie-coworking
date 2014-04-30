@@ -14,7 +14,7 @@ framework:
     validation:      { enable_annotations: true }
     templating:
         engines: ['twig']
-        assets_base_urls: static.capitainerie-coworking.com
+        assets_base_urls: 'http://static.capitainerie-coworking.com'
         #assets_version: SomeVersionScheme
     default_locale:  "%locale%"
     trusted_hosts:   ~
