@@ -8,7 +8,7 @@
 	'assets/plugins/flexslider/flexslider.css'
     'assets/plugins/bxslider/jquery.bxslider.css'
     'assets/plugins/revolution_slider/rs-plugin/css/settings.css'
-    filter='cssrewrite,cssimport,yui_css' %}
+    filter='cssrewrite,cssimport,?yui_css' %}
     <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
 {% endblock %}
@@ -21,7 +21,7 @@
     'assets/plugins/flexslider/jquery.flexslider-min.js'
     'assets/plugins/bxslider/jquery.bxslider.js'
     'assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.revolution.min.js'
-    'assets/js/pages/index.js' filter='yui_js'%}
+    'assets/js/pages/index.js' filter='?yui_js'%}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
 
