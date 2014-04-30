@@ -15,7 +15,7 @@ framework:
     templating:
         engines: ['twig']
         assets_base_urls: 'http://static.capitainerie-coworking.com'
-        assets_version: '2014-04-30' 
+#        assets_version: '2014-04-30' 
     default_locale:  "%locale%"
     trusted_hosts:   ~
     trusted_proxies: ~
@@ -81,11 +81,11 @@ avalanche_imagine:
         small:
             quality: 75
             type:    thumbnail
-            options: { size: [872, 724], mode: outbound }
+            options: { size: [144, 120], mode: outbound }
         presentation:
             quality: 75
             type:    thumbnail
-            options: { size: [872, 724], mode: outbound }
+            options: { size: [278, 231], mode: outbound }
         mini:
             quality: 75
             type:    thumbnail

@@ -4,7 +4,8 @@ use Symfony\Component\ClassLoader\ApcClassLoader;
 use Symfony\Component\HttpFoundation\Request;
 
 if ($_SERVER['SERVER_NAME'] == 'static.capitainerie-coworking.com') {
-    header('Location: http://www.capitainerie-coworking.com/?'. $_SERVER['QUERY_STRING']);
+    header('Status: 302 Moved Temporarily');
+    header('Location: http://www.capitainerie-coworking.com'. $_SERVER['REQUEST_URI']);
     exit();
 }
 

@@ -2,7 +2,7 @@
 	data-thumb="/assets/img/sliders/revolution/thumbs/thumb1.jpg">
 
     <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
-    <img src="{{( '/assets/img/sliders/revolution/bg1.jpg') }}">
+    <img src="{{ asset( 'assets/img/sliders/revolution/bg1.jpg') }}" width="1920" height="500">
 
     <div class="caption large_text sfb bg-black-opacity"
          data-x="176"
@@ -20,7 +20,7 @@
          data-speed="600"
          data-start="{{ 1100 + 100 * 1 }}"
          data-easing="easeOutExpo">
-         <img class="img-border" width="150px"  src="{{( '/bundles/capitaineriecore/images/jdubois.png'| apply_filter('small')) }}" alt="jdubois">
+         <img class="img-border" width="144" height="120"  src="{{ asset( 'bundles/capitaineriecore/images/jdubois.png'| apply_filter('small')) }}" alt="jdubois">
     </div>
 
     <div class="caption randomrotate"
@@ -29,7 +29,7 @@
          data-speed="600"
          data-start="{{ 1100 + 100 * 2 }}"
          data-easing="easeOutExpo">
-        <img class="img-border" width="150px" src="{{( '/bundles/capitaineriecore/images/cb.jpg'| apply_filter('small')) }}" alt="cbarragan">
+        <img class="img-border" width="144" height="120" src="{{ asset( 'bundles/capitaineriecore/images/cb.jpg'| apply_filter('small')) }}" alt="cbarragan">
     </div>
 
     <div class="caption randomrotate"
@@ -38,7 +38,7 @@
          data-speed="600"
          data-start="{{ 1100 + 100 * 3 }}"
          data-easing="easeOutExpo">
-        <img class="img-border" width="150px"  src="{{( '/bundles/capitaineriecore/images/shordeaux.png'| apply_filter('small')) }}" alt="shordeaux">
+        <img class="img-border" width="144" height="120"  src="{{ asset( 'bundles/capitaineriecore/images/shordeaux.png'| apply_filter('small')) }}" alt="shordeaux">
     </div>
 
     <div class="caption randomrotate"
@@ -47,7 +47,7 @@
          data-speed="600"
          data-start="{{ 1100 + 100 * 4 }}"
          data-easing="easeOutExpo">
-        <img class="img-border" width="150px" src="{{picture|default("http://dummyimage.com/872x724/bbb/000&text=Rejoignez-nous")}}" alt="you">
+        <img class="img-border" width="144" height="120" src="http://dummyimage.com/144x120/bbb/000&text=Rejoignez-nous" alt="you">
     </div>
 
 
