@@ -4,7 +4,7 @@
 	{{ parent() }}
     {% stylesheets
     'assets/plugins/fancybox/source/jquery.fancybox.css'
-    filter='cssrewrite,cssimport' %}
+    filter='cssrewrite,cssimport,yui_css' %}
     <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
 {% endblock %}
@@ -13,7 +13,7 @@
 	{{ parent() }}
     {% javascripts
 	'assets/plugins/fancybox/source/jquery.fancybox.pack.js'
-    %}
+    filter='yui_js'%}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
 
