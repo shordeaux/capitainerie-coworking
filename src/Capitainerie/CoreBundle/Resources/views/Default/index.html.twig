@@ -4,27 +4,33 @@
 
 {% block stylesheets %}
 	{{ parent() }}
-	<link rel="stylesheet" href="{{asset('assets/plugins/flexslider/flexslider.css') }}">
-    <link rel="stylesheet" href="{{asset('assets/plugins/bxslider/jquery.bxslider.css') }}">
-    <link rel="stylesheet" href="{{asset('assets/plugins/revolution_slider/rs-plugin/css/settings.css') }}" type="text/css" media="screen">
-
+    {% stylesheets
+	'assets/plugins/flexslider/flexslider.css'
+    'assets/plugins/bxslider/jquery.bxslider.css'
+    'assets/plugins/revolution_slider/rs-plugin/css/settings.css'
+    filter='cssrewrite,cssimport' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
 {% endblock %}
 
 
 {% block javascripts %}
 	{{ parent() }}
-	<script type="text/javascript" src="{{asset('assets/plugins/flexslider/jquery.flexslider-min.js') }}"></script>
-	<script type="text/javascript" src="{{asset('assets/plugins/bxslider/jquery.bxslider.js') }}"></script>
-	<script type="text/javascript" src="{{asset('assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
-	<script type="text/javascript" src="{{asset('assets/js/pages/index.js') }}"></script>
+
+    {% javascripts
+    'assets/plugins/flexslider/jquery.flexslider-min.js'
+    'assets/plugins/bxslider/jquery.bxslider.js'
+    'assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.revolution.min.js'
+    'assets/js/pages/index.js' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
 	<script type="text/javascript">
     jQuery(document).ready(function() {
-        //App.initSliders();
         App.initBxSlider();
         Index.initRevolutionSlider();
     });
 	</script>
-
 {% endblock %}
 
 
