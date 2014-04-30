@@ -4,7 +4,7 @@
 	{{ parent() }}
     {% stylesheets
 	'assets/css/pages/page_contact.css'
-    filter='cssrewrite,cssimport' %}
+    filter='cssrewrite,cssimport,yui_css' %}
     <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
 {% endblock %}
@@ -16,7 +16,7 @@
 
 {% javascripts
 'assets/plugins/gmap/gmap.js'
-'assets/js/pages/contact.js' %}
+'assets/js/pages/contact.js' filter='yui_js'%}
 <script type="text/javascript" src="{{ asset_url }}"></script>
 {% endjavascripts %}
 
