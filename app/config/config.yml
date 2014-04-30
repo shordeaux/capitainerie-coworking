@@ -76,12 +76,15 @@ avalanche_imagine:
     driver:       gd
     filters:
         small:
+            quality: 75
             type:    thumbnail
             options: { size: [872, 724], mode: outbound }
         presentation:
+            quality: 75
             type:    thumbnail
             options: { size: [872, 724], mode: outbound }
         mini:
+            quality: 75
             type:    thumbnail
             options: { size: [100, 100], mode: outbound }
 
