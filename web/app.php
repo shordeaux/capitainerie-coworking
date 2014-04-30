@@ -3,6 +3,11 @@
 use Symfony\Component\ClassLoader\ApcClassLoader;
 use Symfony\Component\HttpFoundation\Request;
 
+if ($_SERVER['SERVER_NAME'] == 'static.capitainerie-coworking.com') {
+    header('Location: http://www.capitainerie-coworking.com/?'. $_SERVER['QUERY_STRING']);
+    exit();
+}
+
 $loader = require_once __DIR__.'/../app/bootstrap.php.cache';
 
 // Use APC for autoloading to improve performance.
