@@ -15,7 +15,7 @@ framework:
     templating:
         engines: ['twig']
         assets_base_urls: 'http://static.capitainerie-coworking.com'
-        #assets_version: SomeVersionScheme
+        assets_version: '2014-04-30' 
     default_locale:  "%locale%"
     trusted_hosts:   ~
     trusted_proxies: ~
@@ -74,7 +74,7 @@ avalanche_imagine:
     source_root:  %kernel.root_dir%/../web
     web_root:     %kernel.root_dir%/../web
     cache_prefix: media/cache
-    driver:       gd
+    driver:       imagick 
     filters:
         small:
             quality: 75
