@@ -49,7 +49,7 @@
             <div class="col-md-4 col-sm-6">
                 <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="Une pièce pour la détente, l'échange et le travail." href="{{ asset('/bundles/capitaineriecore/images/lieu/bureau.png') }}">
                     <span class="overlay-zoom">
-                        <img alt="" src="{{( '/bundles/capitaineriecore/images/lieu/bureau.png'| apply_filter('presentation')) }}" class="img-responsive">
+                        <img alt="" src="{{( '/bundles/capitaineriecore/images/lieu/bureau.png'| apply_filter('compressed')) }}" class="img-responsive">
                         <div class="zoom-icon"></div>
                     </span>
                 </a>
@@ -60,19 +60,25 @@
         <h2>Découvrez nos autres espaces</h2>
         <div class="row margin-bottom-20">
             <div class="col-md-4 col-sm-6">
-                <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/open_space.png'| apply_filter('presentation')) }}" alt="">
-                <h2>Le sous marin</h2>
-                <p>L'open space de type Loft pour travailler de façon studieuse.</p>
+                <a href="{{path('sous-marin')}}">
+                    <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/open_space.png'| apply_filter('compressed')) }}" alt="">
+                    <h3>Le sous marin</h3>
+                    <p>L'open space de type Loft pour travailler de façon studieuse.</p>
+                </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/salle_de_reunion.png'| apply_filter('presentation')) }}" alt="">
-                <h2>La salle de réunion</h2>
-                <p>Pour recevoir des clients, faire un point en équipe au calme ou faire une présentation</p>
+                <a href="{{path('salle-reunion')}}">
+                    <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/salle_de_reunion.png'| apply_filter('compressed')) }}" alt="">
+                    <h3>La salle de réunion</h3>
+                    <p>Pour recevoir des clients, faire un point en équipe au calme ou faire une présentation</p>
+                </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/espace_repos.png'| apply_filter('presentation')) }}" alt="">
-                <h2>Le bar</h2>
-                <p>Pour recharger les batteries et échanger autour d'un café.</p>
+                <a href="{{path('bar')}}">
+                    <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/espace_repos.png'| apply_filter('compressed')) }}" alt="">
+                    <h3>Le bar</h3>
+                    <p>Pour recharger les batteries et échanger autour d'un café.</p>
+                </a>
             </div>
         </div>
     </div>
