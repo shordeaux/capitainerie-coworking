@@ -111,19 +111,25 @@
         <h2>Découvrez nos autres espaces</h2>
         <div class="row margin-bottom-20">
             <div class="col-md-4 col-sm-6">
-                <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/bureau.png'| apply_filter('presentation')) }}" alt="">
-                <h3>Le port</h3>
-                <p>Où l'on échange librement sur ses aventures en mer</p>
+                <a href="{{path('port')}}">
+                    <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/bureau.png'| apply_filter('presentation')) }}" alt="">
+                    <h3>Le port</h3>
+                    <p>Où l'on échange librement sur ses aventures en mer</p>
+                </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/salle_de_reunion.png'| apply_filter('presentation')) }}" alt="">
-                <h3>La salle de réunion</h3>
-                <p>Pour recevoir des clients, faire un point en équipe au calme ou faire une présentation</p>
+                <a href="{{path('salle-reunion')}}">
+                    <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/salle_de_reunion.png'| apply_filter('presentation')) }}" alt="">
+                    <h3>La salle de réunion</h3>
+                    <p>Pour recevoir des clients, faire un point en équipe au calme ou faire une présentation</p>
+                </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/espace_repos.png'| apply_filter('presentation')) }}" alt="">
-                <h3>Le bar</h3>
-                <p>Pour recharger les batteries et échanger autour d'un café.</p>
+                <a href="{{path('bar')}}">
+                    <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/espace_repos.png'| apply_filter('presentation')) }}" alt="">
+                    <h3>Le bar</h3>
+                    <p>Pour recharger les batteries et échanger autour d'un café.</p>
+                </a>
             </div>
         </div>
     </div>

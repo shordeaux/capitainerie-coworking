@@ -76,21 +76,27 @@
         <hr class="margin-bottom-30">
         <h2>Découvrez nos autres espaces</h2>
 	    <div class="row margin-bottom-20">
-	        <div class="col-md-4 col-sm-6">
-                <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/open_space.png'| apply_filter('presentation')) }}" alt="">
-                <h3>Le sous marin</h3>
-                <p>L'open space de type Loft pour travailler de façon studieuse.</p>
+            <div class="col-md-4 col-sm-6">
+                <a href="{{path('sous-marin')}}">
+                    <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/open_space.png'| apply_filter('presentation')) }}" alt="">
+                    <h3>Le sous marin</h3>
+                    <p>L'open space de type Loft pour travailler de façon studieuse.</p>
+                </a>
             </div>
-	       <div class="col-md-4 col-sm-6">
-	            <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/bureau.png'| apply_filter('presentation')) }}" alt="">
-	            <h3>Le port</h3>
-	            <p>Où l'on échange librement sur ces aventures en mer</p>
-	        </div>
-	       <div class="col-md-4 col-sm-6">
-	            <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/salle_de_reunion.png'| apply_filter('presentation')) }}" alt="">
-	            <h3>La salle de réunion</h3>
-	            <p>Pour recevoir des clients, faire un point en équipe au calme ou faire une présentation</p>
-	        </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="{{path('port')}}">
+                    <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/bureau.png'| apply_filter('presentation')) }}" alt="">
+                    <h3>Le port</h3>
+                    <p>Où l'on échange librement sur ces aventures en mer</p>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="{{path('salle-reunion')}}">
+                    <img class="img-responsive" src="{{( '/bundles/capitaineriecore/images/lieu/salle_de_reunion.png'| apply_filter('presentation')) }}" alt="">
+                    <h3>La salle de réunion</h3>
+                    <p>Pour recevoir des clients, faire un point en équipe au calme ou faire une présentation</p>
+                </a>
+            </div>
         </div>
     </div>
     <!-- End Service Blcoks -->
