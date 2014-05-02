@@ -86,10 +86,6 @@ avalanche_imagine:
             quality: 75
             type:    thumbnail
             options: { size: [144, 120], mode: outbound }
-        moyenne:
-            quality: 75
-            type:    thumbnail
-            options: { size: [360, 270], mode: outbound }
         presentation:
             quality: 75
             type:    thumbnail
