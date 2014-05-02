@@ -240,6 +240,13 @@ filter='yui_js'%}
 <script type="text/javascript">
     jQuery(document).ready(function() {
       	App.init();
+
+        $(".dropdown > ul").hide();
+        $(".dropdown").hover(function (){
+            $(this).children("ul").show();
+        }, function (){
+            $(this).children("ul").hide();
+        });
     });
 </script>
 
