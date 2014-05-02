@@ -78,10 +78,14 @@ avalanche_imagine:
     cache_prefix: media/cache
     driver:       imagick
     filters:
+        compressed:
+            quality: 75
+            type:    thumbnail
+            options: { size: [640, 480], mode: outbound }
         small:
             quality: 75
             type:    thumbnail
-            options: { size: [165, 120], mode: outbound }
+            options: { size: [144, 120], mode: outbound }
         moyenne:
             quality: 75
             type:    thumbnail
