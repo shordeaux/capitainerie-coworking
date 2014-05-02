@@ -2,11 +2,6 @@
 
 {% block stylesheets %}
 	{{ parent() }}
-    {% stylesheets
-	'assets/css/pages/page_pricing.css'
-    filter='cssrewrite,cssimport,?yui_css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" />
-    {% endstylesheets %}
 {% endblock %}
 
 {% block body %}
